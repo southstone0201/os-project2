@@ -1,0 +1,901 @@
+Script started on 2024-05-28 12:44:13+0900
+]0;root@osta-VirtualBox: /usr/src/linux-4.20.11[01;32mroot@osta-VirtualBox[00m:[01;34m/usr/src/linux-4.20.11[00m# dmesg
+[32m[    0.000000] [0mLinux version 4.20.11.sslab (root@osta-VirtualBox) (gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04)) #12 SMP Tue May 28 12:28:21 KST 2024
+[32m[    0.000000] [0m[33mCommand line[0m: BOOT_IMAGE=/boot/vmlinuz-4.20.11.sslab root=UUID=40df8907-fbc2-4784-9d41-2276ee4fad0c ro quiet splash
+[32m[    0.000000] [0mKERNEL supported cpus:
+[32m[    0.000000] [0m  Intel GenuineIntel
+[32m[    0.000000] [0m  AMD AuthenticAMD
+[32m[    0.000000] [0m  Hygon HygonGenuine
+[32m[    0.000000] [0m  Centaur CentaurHauls
+[32m[    0.000000] [0m[33mx86/fpu[0m: x87 FPU will use FXSAVE
+[32m[    0.000000] [0mBIOS-provided physical RAM map:
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x0000000000000000-0x000000000009fbff] usable
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x0000000000100000-0x00000000dffeffff] usable
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[32m[    0.000000] [0m[33mBIOS-e820[0m: [mem 0x0000000100000000-0x000000011fffffff] usable
+[32m[    0.000000] [0m[33mNX (Execute Disable) protection[0m: active
+[32m[    0.000000] [0mSMBIOS 2.5 present.
+[32m[    0.000000] [0m[33mDMI[0m: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[32m[    0.000000] [0m[33mHypervisor detected[0m: KVM
+[32m[    0.000000] [0m[33mkvm-clock[0m: Using msrs 4b564d01 and 4b564d00
+[32m[    0.000000] [0m[33mkvm-clock[0m: cpu 0, msr 69001001, primary cpu clock
+[32m[    0.000000] [0m[33mkvm-clock[0m: using sched offset of 12926526987 cycles
+[32m[    0.000001] [0m[33mclocksource[0m: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[32m[    0.000003] [0m[33mtsc[0m: Detected 2995.200 MHz processor
+[32m[    0.003343] [0m[33me820[0m: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[32m[    0.003344] [0m[33me820[0m: remove [mem 0x000a0000-0x000fffff] usable
+[32m[    0.003347] [0mlast_pfn = 0x120000 max_arch_pfn = 0x400000000
+[32m[    0.003385] [0m[33mMTRR default type[0m: uncachable
+[32m[    0.003386] [0mMTRR fixed ranges disabled:
+[32m[    0.003386] [0m  00000-FFFFF uncachable
+[32m[    0.003387] [0mMTRR variable ranges disabled:
+[32m[    0.003387] [0m  0 disabled
+[32m[    0.003387] [0m  1 disabled
+[32m[    0.003387] [0m  2 disabled
+[32m[    0.003388] [0m  3 disabled
+[32m[    0.003388] [0m  4 disabled
+[32m[    0.003388] [0m  5 disabled
+[32m[    0.003388] [0m  6 disabled
+[32m[    0.003388] [0m  7 disabled
+[32m[    0.003392] [0mDisabled
+[32m[    0.003393] [0m[33mx86/PAT[0m: MTRRs disabled, skipping PAT initialization too.
+[32m[    0.003397] [0mCPU MTRRs all blank - virtualized system.
+[32m[    0.003398] [0m[33mx86/PAT[0m: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+[32m[    0.003399] [0mlast_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+[32m[    0.003434] [0mfound SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [(____ptrval____)]
+[32m[    0.020446] [0m[33mcheck[0m: Scanning 1 areas for low memory corruption
+[32m[    0.020448] [0mBase memory trampoline at [(____ptrval____)] 99000 size 24576
+[32m[    0.020476] [0mBRK [0x69201000, 0x69201fff] PGTABLE
+[32m[    0.020477] [0mBRK [0x69202000, 0x69202fff] PGTABLE
+[32m[    0.020477] [0mBRK [0x69203000, 0x69203fff] PGTABLE
+[32m[    0.020492] [0mBRK [0x69204000, 0x69204fff] PGTABLE
+[32m[    0.020493] [0mBRK [0x69205000, 0x69205fff] PGTABLE
+[32m[    0.020605] [0m[33mRAMDISK[0m: [mem 0x3187f000-0x34c36fff]
+[32m[    0.020626] [0m[33mACPI[0m: Early table checksum verification disabled
+[32m[    0.020639] [0m[33mACPI[0m: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[32m[    0.020648] [0m[33mACPI[0m: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[32m[    0.020652] [0m[33mACPI[0m: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[32m[    0.020656] [0m[33mACPI[0m: DSDT 0x00000000DFFF0660 002353 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+[32m[    0.020658] [0m[33mACPI[0m: FACS 0x00000000DFFF0200 000040
+[32m[    0.020659] [0m[33mACPI[0m: FACS 0x00000000DFFF0200 000040
+[32m[    0.020661] [0m[33mACPI[0m: APIC 0x00000000DFFF0240 0000AC (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[32m[    0.020662] [0m[33mACPI[0m: SSDT 0x00000000DFFF02F0 00036C (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+[32m[    0.020667] [0m[33mACPI[0m: Local APIC address 0xfee00000
+[32m[    0.021225] [0mNo NUMA configuration found
+[32m[    0.021225] [0mFaking a node at [mem 0x0000000000000000-0x000000011fffffff]
+[32m[    0.021229] [0mNODE_DATA(0) allocated [mem 0x11ffd1000-0x11fffbfff]
+[32m[    0.021734] [0mZone ranges:
+[32m[    0.021735] [0m  DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[32m[    0.021735] [0m  DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[32m[    0.021736] [0m  Normal   [mem 0x0000000100000000-0x000000011fffffff]
+[32m[    0.021736] [0m  Device   empty
+[32m[    0.021737] [0mMovable zone start for each node
+[32m[    0.021737] [0mEarly memory node ranges
+[32m[    0.021738] [0m[33m  node   0[0m: [mem 0x0000000000001000-0x000000000009efff]
+[32m[    0.021738] [0m[33m  node   0[0m: [mem 0x0000000000100000-0x00000000dffeffff]
+[32m[    0.021738] [0m[33m  node   0[0m: [mem 0x0000000100000000-0x000000011fffffff]
+[32m[    0.021772] [0m[33mZeroed struct page in unavailable ranges[0m: 114 pages
+[32m[    0.021773] [0mInitmem setup node 0 [mem 0x0000000000001000-0x000000011fffffff]
+[32m[    0.021774] [0m[33mOn node 0 totalpages[0m: 1048462
+[32m[    0.021775] [0m[33m  DMA zone[0m: 64 pages used for memmap
+[32m[    0.021775] [0m[33m  DMA zone[0m: 21 pages reserved
+[32m[    0.021776] [0m[33m  DMA zone[0m: 3998 pages, LIFO batch:0
+[32m[    0.022229] [0m[33m  DMA32 zone[0m: 14272 pages used for memmap
+[32m[    0.022230] [0m[33m  DMA32 zone[0m: 913392 pages, LIFO batch:63
+[32m[    0.127811] [0m[33m  Normal zone[0m: 2048 pages used for memmap
+[32m[    0.127813] [0m[33m  Normal zone[0m: 131072 pages, LIFO batch:31
+[32m[    0.143918] [0m[33mACPI[0m: PM-Timer IO Port: 0x4008
+[32m[    0.143920] [0m[33mACPI[0m: Local APIC address 0xfee00000
+[32m[    0.144106] [0m[33mIOAPIC[0][0m: apic_id 12, version 32, address 0xfec00000, GSI 0-23
+[32m[    0.144108] [0m[33mACPI[0m: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[32m[    0.144109] [0m[33mACPI[0m: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[32m[    0.144110] [0m[33mACPI[0m: IRQ0 used by override.
+[32m[    0.144111] [0m[33mACPI[0m: IRQ9 used by override.
+[32m[    0.144112] [0mUsing ACPI (MADT) for SMP configuration information
+[32m[    0.144131] [0m[33msmpboot[0m: Allowing 12 CPUs, 0 hotplug CPUs
+[32m[    0.144209] [0m[33mPM[0m: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[32m[    0.144209] [0m[33mPM[0m: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[32m[    0.144210] [0m[33mPM[0m: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[32m[    0.144210] [0m[33mPM[0m: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[32m[    0.144210] [0m[33mPM[0m: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+[32m[    0.144210] [0m[33mPM[0m: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+[32m[    0.144211] [0m[33mPM[0m: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[32m[    0.144211] [0m[33mPM[0m: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+[32m[    0.144211] [0m[33mPM[0m: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+[32m[    0.144211] [0m[33mPM[0m: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+[32m[    0.144212] [0m[33mPM[0m: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+[32m[    0.144213] [0m[mem 0xe0000000-0xfebfffff] available for PCI devices
+[32m[    0.144213] [0mBooting paravirtualized kernel on KVM
+[32m[    0.144216] [0m[33mclocksource[0m: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[32m[    0.144223] [0m[33mrandom[0m: get_random_bytes called from start_kernel+0x97/0x526 with crng_init=0
+[32m[    0.144227] [0m[33msetup_percpu[0m: NR_CPUS:8192 nr_cpumask_bits:12 nr_cpu_ids:12 nr_node_ids:1
+[32m[    0.151042] [0m[33mpercpu[0m: Embedded 46 pages/cpu @(____ptrval____) s151552 r8192 d28672 u262144
+[32m[    0.151050] [0m[33mpcpu-alloc[0m: s151552 r8192 d28672 u262144 alloc=1*2097152
+[32m[    0.151051] [0m[33mpcpu-alloc[0m: [0] 00 01 02 03 04 05 06 07 [0] 08 09 10 11 -- -- -- -- 
+[32m[    0.151160] [0m[33mPV qspinlock hash table entries[0m: 256 (order: 0, 4096 bytes)
+[32m[    0.151177] [0m[33mBuilt 1 zonelists, mobility grouping on.  Total pages[0m: 1032057
+[32m[    0.151179] [0m[33mPolicy zone[0m: Normal
+[32m[    0.151180] [0m[33mKernel command line[0m: BOOT_IMAGE=/boot/vmlinuz-4.20.11.sslab root=UUID=40df8907-fbc2-4784-9d41-2276ee4fad0c ro quiet splash
+[32m[    0.201700] [0m[33mCalgary[0m: detecting Calgary via BIOS EBDA area
+[32m[    0.201702] [0m[33mCalgary[0m: Unable to locate Rio Grande table in EBDA - bailing!
+[32m[    0.206248] [0m[33mMemory[0m: 3973860K/4193848K available (14341K kernel code, 2320K rwdata, 4152K rodata, 2460K init, 5336K bss, 219988K reserved, 0K cma-reserved)
+[32m[    0.206577] [0m[33mSLUB[0m: HWalign=64, Order=0-3, MinObjects=0, CPUs=12, Nodes=1
+[32m[    0.206594] [0m[33mftrace[0m: allocating 41136 entries in 161 pages
+[32m[    0.218562] [0m[33mrcu[0m: Hierarchical RCU implementation.
+[32m[    0.218564] [0m[33mrcu[0m: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=12.
+[32m[    0.218565] [0m	Tasks RCU enabled.
+[32m[    0.218565] [0m[33mrcu[0m: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[32m[    0.218565] [0m[33mrcu[0m: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=12
+[32m[    0.220308] [0m[33mNR_IRQS[0m: 524544, nr_irqs: 520, preallocated irqs: 16
+[32m[    0.248226] [0m[33mConsole[0m: colour VGA+ 80x25
+[32m[    0.248231] [0m[33mprintk[0m: console [tty0] enabled
+[32m[    0.248288] [0m[33mACPI[0m: Core revision 20181003
+[32m[    0.248476] [0m[33mAPIC[0m: Switch to symmetric I/O mode setup
+[32m[    0.248481] [0mSwitched APIC routing to physical flat.
+[32m[    0.254639] [0m[33m..TIMER[0m: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[32m[    0.254755] [0m[33mclocksource[0m: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2b2c8ec87c7, max_idle_ns: 440795278598 ns
+[32m[    0.254769] [0mCalibrating delay loop (skipped) preset value.. 5990.40 BogoMIPS (lpj=11980800)
+[32m[    0.254771] [0m[33mpid_max[0m: default: 32768 minimum: 301
+[32m[    0.254818] [0m[33mLSM[0m: Security Framework initializing
+[32m[    0.254818] [0m[33mYama[0m: becoming mindful.
+[32m[    0.254991] [0m[33mAppArmor[0m: AppArmor initialized
+[32m[    0.265185] [0m[33mDentry cache hash table entries[0m: 524288 (order: 10, 4194304 bytes)
+[32m[    0.269488] [0m[33mInode-cache hash table entries[0m: 262144 (order: 9, 2097152 bytes)
+[32m[    0.269602] [0m[33mMount-cache hash table entries[0m: 8192 (order: 4, 65536 bytes)
+[32m[    0.269705] [0m[33mMountpoint-cache hash table entries[0m: 8192 (order: 4, 65536 bytes)
+[32m[    0.270707] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.270757] [0m[33mLast level iTLB entries[0m: 4KB 0, 2MB 0, 4MB 0
+[32m[    0.270757] [0m[33mLast level dTLB entries[0m: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[32m[    0.270757] [0m[33mSpectre V2 [0m: Mitigation: Enhanced IBRS
+[32m[    0.270757] [0m[33mSpectre V2 [0m: Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[32m[    0.270757] [0m[33mSpeculative Store Bypass[0m: Vulnerable
+[32m[    0.270757] [0m[33mFreeing SMP alternatives memory[0m: 36K
+[32m[    0.274757] [0m[33msmpboot[0m: CPU0: Intel(R) Core(TM) Ultra 7 155H (family: 0x6, model: 0xaa, stepping: 0x4)
+[32m[    0.274757] [0m[33mPerformance Events[0m: unsupported p6 CPU model 170 no PMU driver, software events only.
+[32m[    0.274757] [0m[33mrcu[0m: Hierarchical SRCU implementation.
+[32m[    0.274757] [0m[33mNMI watchdog[0m: Perf NMI watchdog permanently disabled
+[32m[    0.274757] [0m[33msmp[0m: Bringing up secondary CPUs ...
+[32m[    0.274757] [0m[33mx86[0m: Booting SMP configuration:
+[32m[    0.274757] [0m[33m.... node  #0, CPUs[0m:        #1
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 1, msr 69001041, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.274757] [0m[1mTSC synchronization [CPU#0 -> CPU#1]:[0m
+[32m[    0.274757] [0m[1mMeasured 78579 cycles TSC warp between CPUs, turning off TSC clock.[0m
+[32m[    0.274757] [0m[33mtsc[0m: Marking TSC unstable due to check_tsc_sync_source failed
+[32m[    0.275159] [0m[1m  #2[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 2, msr 69001081, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.276775] [0m[1m  #3[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 3, msr 690010c1, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.280259] [0m[1m  #4[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 4, msr 69001101, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.283102] [0m[1m  #5[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 5, msr 69001141, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.284906] [0m[1m  #6[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 6, msr 69001181, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.287062] [0m[1m  #7[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 7, msr 690011c1, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.288676] [0m[1m  #8[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 8, msr 69001201, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.290779] [0m[1m  #9[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 9, msr 69001241, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.292356] [0m[1m #10[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 10, msr 69001281, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.292646] [0m[1m #11[0m
+[32m[    0.037832] [0m[33mkvm-clock[0m: cpu 11, msr 690012c1, secondary cpu clock
+[32m[    0.037832] [0m[33mmce[0m: CPU supports 0 MCE banks
+[32m[    0.295629] [0m[33msmp[0m: Brought up 1 node, 12 CPUs
+[32m[    0.295629] [0m[33msmpboot[0m: Max logical packages: 1
+[32m[    0.295629] [0m[33msmpboot[0m: Total of 12 processors activated (71884.80 BogoMIPS)
+[32m[    0.295629] [0m[33mdevtmpfs[0m: initialized
+[32m[    0.295629] [0m[33mx86/mm[0m: Memory block size: 128MB
+[32m[    0.299523] [0m[33mclocksource[0m: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[32m[    0.299523] [0m[33mfutex hash table entries[0m: 4096 (order: 6, 262144 bytes)
+[32m[    0.300371] [0m[33mpinctrl core[0m: initialized pinctrl subsystem
+[32m[    0.300630] [0m[33mRTC time[0m:  3:42:25, date: 05/28/24
+[32m[    0.303516] [0m[33mNET[0m: Registered protocol family 16
+[32m[    0.303589] [0m[33maudit[0m: initializing netlink subsys (disabled)
+[32m[    0.303688] [0m[33maudit[0m: type=2000 audit(1716867760.033:1): state=initialized audit_enabled=0 res=1
+[32m[    0.303688] [0m[33mcpuidle[0m: using governor ladder
+[32m[    0.303688] [0m[33mcpuidle[0m: using governor menu
+[32m[    0.303688] [0m[33mACPI[0m: bus type PCI registered
+[32m[    0.303688] [0m[33macpiphp[0m: ACPI Hot Plug PCI Controller Driver version: 0.5
+[32m[    0.303688] [0m[33mPCI[0m: Using configuration type 1 for base access
+[32m[    0.306851] [0mHugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[32m[    0.311960] [0m[33mACPI[0m: Added _OSI(Module Device)
+[32m[    0.311961] [0m[33mACPI[0m: Added _OSI(Processor Device)
+[32m[    0.311961] [0m[33mACPI[0m: Added _OSI(3.0 _SCP Extensions)
+[32m[    0.311962] [0m[33mACPI[0m: Added _OSI(Processor Aggregator Device)
+[32m[    0.311963] [0m[33mACPI[0m: Added _OSI(Linux-Dell-Video)
+[32m[    0.311963] [0m[33mACPI[0m: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[32m[    0.313272] [0m[33mACPI[0m: 2 ACPI AML tables successfully acquired and loaded
+[32m[    0.315309] [0m[33mACPI[0m: Interpreter enabled
+[32m[    0.315317] [0m[33mACPI[0m: (supports S0 S5)
+[32m[    0.315318] [0m[33mACPI[0m: Using IOAPIC for interrupt routing
+[32m[    0.315496] [0m[33mPCI[0m: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[32m[    0.315577] [0m[33mACPI[0m: Enabled 2 GPEs in block 00 to 07
+[32m[    0.318757] [0m[33mACPI[0m: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[32m[    0.318757] [0m[33macpi PNP0A03:00[0m: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[32m[    0.318757] [0m[33macpi PNP0A03:00[0m: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[32m[    0.318757] [0m[33macpi PNP0A03:00[0m[1m: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[0m[32m[    0.318757] [0mPCI host bridge to bus 0000:00
+[32m[    0.318757] [0m[33mpci_bus 0000:00[0m: root bus resource [io  0x0000-0x0cf7 window]
+[32m[    0.318757] [0m[33mpci_bus 0000:00[0m: root bus resource [io  0x0d00-0xffff window]
+[32m[    0.318757] [0m[33mpci_bus 0000:00[0m: root bus resource [mem 0x000a0000-0x000bffff window]
+[32m[    0.318757] [0m[33mpci_bus 0000:00[0m: root bus resource [mem 0xe0000000-0xfdffffff window]
+[32m[    0.318757] [0m[33mpci_bus 0000:00[0m: root bus resource [bus 00-ff]
+[32m[    0.318757] [0m[33mpci 0000:00:00.0[0m: [8086:1237] type 00 class 0x060000
+[32m[    0.321655] [0m[33mpci 0000:00:01.0[0m: [8086:7000] type 00 class 0x060100
+[32m[    0.322757] [0m[33mpci 0000:00:01.1[0m: [8086:7111] type 00 class 0x01018a
+[32m[    0.322757] [0m[33mpci 0000:00:01.1[0m: reg 0x20: [io  0xd000-0xd00f]
+[32m[    0.322757] [0m[33mpci 0000:00:01.1[0m: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[32m[    0.322757] [0m[33mpci 0000:00:01.1[0m: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[32m[    0.322757] [0m[33mpci 0000:00:01.1[0m: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[32m[    0.322757] [0m[33mpci 0000:00:01.1[0m: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[32m[    0.324492] [0m[33mpci 0000:00:02.0[0m: [15ad:0405] type 00 class 0x030000
+[32m[    0.326757] [0m[33mpci 0000:00:02.0[0m: reg 0x10: [io  0xd010-0xd01f]
+[32m[    0.326757] [0m[33mpci 0000:00:02.0[0m: reg 0x14: [mem 0xe0000000-0xe7ffffff pref]
+[32m[    0.328043] [0m[33mpci 0000:00:02.0[0m: reg 0x18: [mem 0xf0000000-0xf01fffff]
+[32m[    0.340896] [0m[33mpci 0000:00:03.0[0m: [8086:100e] type 00 class 0x020000
+[32m[    0.341261] [0m[33mpci 0000:00:03.0[0m: reg 0x10: [mem 0xf0200000-0xf021ffff]
+[32m[    0.341520] [0m[33mpci 0000:00:03.0[0m: reg 0x18: [io  0xd020-0xd027]
+[32m[    0.343335] [0m[33mpci 0000:00:04.0[0m: [80ee:cafe] type 00 class 0x088000
+[32m[    0.343881] [0m[33mpci 0000:00:04.0[0m: reg 0x10: [io  0xd040-0xd05f]
+[32m[    0.344299] [0m[33mpci 0000:00:04.0[0m: reg 0x14: [mem 0xf0400000-0xf07fffff]
+[32m[    0.344730] [0m[33mpci 0000:00:04.0[0m: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+[32m[    0.347514] [0m[33mpci 0000:00:05.0[0m: [8086:2415] type 00 class 0x040100
+[32m[    0.347718] [0m[33mpci 0000:00:05.0[0m: reg 0x10: [io  0xd100-0xd1ff]
+[32m[    0.347818] [0m[33mpci 0000:00:05.0[0m: reg 0x14: [io  0xd200-0xd23f]
+[32m[    0.350757] [0m[33mpci 0000:00:06.0[0m: [106b:003f] type 00 class 0x0c0310
+[32m[    0.350757] [0m[33mpci 0000:00:06.0[0m: reg 0x10: [mem 0xf0804000-0xf0804fff]
+[32m[    0.353668] [0m[33mpci 0000:00:07.0[0m: [8086:7113] type 00 class 0x068000
+[32m[    0.354526] [0m[33mpci 0000:00:07.0[0m: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[32m[    0.354541] [0m[33mpci 0000:00:07.0[0m: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[32m[    0.362511] [0m[33mpci 0000:00:0b.0[0m: [8086:265c] type 00 class 0x0c0320
+[32m[    0.362757] [0m[33mpci 0000:00:0b.0[0m: reg 0x10: [mem 0xf0805000-0xf0805fff]
+[32m[    0.369438] [0m[33mpci 0000:00:0d.0[0m: [8086:2829] type 00 class 0x010601
+[32m[    0.369705] [0m[33mpci 0000:00:0d.0[0m: reg 0x10: [io  0xd240-0xd247]
+[32m[    0.369820] [0m[33mpci 0000:00:0d.0[0m: reg 0x14: [io  0xd248-0xd24b]
+[32m[    0.369934] [0m[33mpci 0000:00:0d.0[0m: reg 0x18: [io  0xd250-0xd257]
+[32m[    0.370048] [0m[33mpci 0000:00:0d.0[0m: reg 0x1c: [io  0xd258-0xd25b]
+[32m[    0.370161] [0m[33mpci 0000:00:0d.0[0m: reg 0x20: [io  0xd260-0xd26f]
+[32m[    0.370284] [0m[33mpci 0000:00:0d.0[0m: reg 0x24: [mem 0xf0806000-0xf0807fff]
+[32m[    0.425923] [0m[33mACPI[0m: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[32m[    0.426185] [0m[33mACPI[0m: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[32m[    0.426278] [0m[33mACPI[0m: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[32m[    0.426371] [0m[33mACPI[0m: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[32m[    0.428116] [0m[33mpci 0000:00:02.0[0m: vgaarb: setting as boot VGA device
+[32m[    0.428116] [0m[33mpci 0000:00:02.0[0m: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[32m[    0.428116] [0m[33mpci 0000:00:02.0[0m: vgaarb: bridge control possible
+[32m[    0.428116] [0m[33mvgaarb[0m: loaded
+[32m[    0.428116] [0mSCSI subsystem initialized
+[32m[    0.428116] [0mlibata version 3.00 loaded.
+[32m[    0.428116] [0m[33mACPI[0m: bus type USB registered
+[32m[    0.428116] [0m[33musbcore[0m: registered new interface driver usbfs
+[32m[    0.428116] [0m[33musbcore[0m: registered new interface driver hub
+[32m[    0.431245] [0m[33musbcore[0m: registered new device driver usb
+[32m[    0.431267] [0m[33mpps_core[0m: LinuxPPS API ver. 1 registered
+[32m[    0.431268] [0m[33mpps_core[0m: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[32m[    0.431269] [0mPTP clock support registered
+[32m[    0.431789] [0m[33mEDAC MC[0m: Ver: 3.0.0
+[32m[    0.431789] [0m[33mPCI[0m: Using ACPI for IRQ routing
+[32m[    0.431789] [0m[33mPCI[0m: pci_cache_line_size set to 64 bytes
+[32m[    0.431789] [0m[33me820[0m: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[32m[    0.431789] [0m[33me820[0m: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+[32m[    0.431789] [0m[33mNetLabel[0m: Initializing
+[32m[    0.431789] [0m[33mNetLabel[0m:  domain hash size = 128
+[32m[    0.431789] [0m[33mNetLabel[0m:  protocols = UNLABELED CIPSOv4 CALIPSO
+[32m[    0.431789] [0m[33mNetLabel[0m:  unlabeled traffic allowed by default
+[32m[    0.438757] [0m[33mclocksource[0m: Switched to clocksource kvm-clock
+[32m[    0.483160] [0m[33mVFS[0m: Disk quotas dquot_6.6.0
+[32m[    0.483184] [0m[33mVFS[0m: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[32m[    0.483412] [0m[33mAppArmor[0m: AppArmor Filesystem Enabled
+[32m[    0.483433] [0m[33mpnp[0m: PnP ACPI init
+[32m[    0.483497] [0m[33mpnp 00:00[0m: Plug and Play ACPI device, IDs PNP0303 (active)
+[32m[    0.483543] [0m[33mpnp 00:01[0m: Plug and Play ACPI device, IDs PNP0f03 (active)
+[32m[    0.484164] [0m[33mpnp[0m: PnP ACPI: found 2 devices
+[32m[    0.505640] [0m[33mclocksource[0m: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[32m[    0.505652] [0m[33mpci_bus 0000:00[0m: resource 4 [io  0x0000-0x0cf7 window]
+[32m[    0.505653] [0m[33mpci_bus 0000:00[0m: resource 5 [io  0x0d00-0xffff window]
+[32m[    0.505654] [0m[33mpci_bus 0000:00[0m: resource 6 [mem 0x000a0000-0x000bffff window]
+[32m[    0.505655] [0m[33mpci_bus 0000:00[0m: resource 7 [mem 0xe0000000-0xfdffffff window]
+[32m[    0.505707] [0m[33mNET[0m: Registered protocol family 2
+[32m[    0.506139] [0m[33mtcp_listen_portaddr_hash hash table entries[0m: 2048 (order: 3, 32768 bytes)
+[32m[    0.506213] [0m[33mTCP established hash table entries[0m: 32768 (order: 6, 262144 bytes)
+[32m[    0.506996] [0m[33mTCP bind hash table entries[0m: 32768 (order: 7, 524288 bytes)
+[32m[    0.507838] [0m[33mTCP[0m: Hash tables configured (established 32768 bind 32768)
+[32m[    0.508118] [0m[33mUDP hash table entries[0m: 2048 (order: 4, 65536 bytes)
+[32m[    0.508232] [0m[33mUDP-Lite hash table entries[0m: 2048 (order: 4, 65536 bytes)
+[32m[    0.508569] [0m[33mNET[0m: Registered protocol family 1
+[32m[    0.508572] [0m[33mNET[0m: Registered protocol family 44
+[32m[    0.508601] [0m[33mpci 0000:00:00.0[0m: Limiting direct PCI/PCI transfers
+[32m[    0.508618] [0m[33mpci 0000:00:01.0[0m: Activating ISA DMA hang workarounds
+[32m[    0.508697] [0m[33mpci 0000:00:02.0[0m: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[32m[    0.510859] [0m[33mPCI[0m: CLS 0 bytes, default 64
+[32m[    0.510859] [0mUnpacking initramfs...
+[32m[    1.281647] [0m[33mFreeing initrd memory[0m: 52960K
+[32m[    1.281651] [0m[33mPCI-DMA[0m: Using software bounce buffering for IO (SWIOTLB)
+[32m[    1.281652] [0m[33msoftware IO TLB[0m: mapped [mem 0xdbff0000-0xdfff0000] (64MB)
+[32m[    1.281839] [0m[33mplatform rtc_cmos[0m: registered platform RTC device (no PNP device found)
+[32m[    1.281872] [0m[33mcheck[0m: Scanning for low memory corruption every 60 seconds
+[32m[    1.285004] [0mInitialise system trusted keyrings
+[32m[    1.285026] [0mKey type blacklist registered
+[32m[    1.285344] [0m[33mworkingset[0m: timestamp_bits=36 max_order=20 bucket_order=0
+[32m[    1.286797] [0m[33mzbud[0m: loaded
+[32m[    1.287536] [0m[33msquashfs[0m: version 4.0 (2009/01/31) Phillip Lougher
+[32m[    1.288372] [0mfuse init (API version 7.28)
+[32m[    1.378806] [0mKey type asymmetric registered
+[32m[    1.378808] [0mAsymmetric key parser 'x509' registered
+[32m[    1.378827] [0mBlock layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[32m[    1.381595] [0mio scheduler noop registered
+[32m[    1.381595] [0mio scheduler deadline registered
+[32m[    1.381663] [0mio scheduler cfq registered (default)
+[32m[    1.383863] [0m[33mshpchp[0m: Standard Hot Plug PCI Controller Driver version: 0.4
+[32m[    1.383916] [0m[33mintel_idle[0m: does not run on family 6 model 170
+[32m[    1.384110] [0m[33mACPI[0m: AC Adapter [AC] (off-line)
+[32m[    1.384160] [0m[33minput[0m: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[32m[    1.384172] [0m[33mACPI[0m: Power Button [PWRF]
+[32m[    1.384236] [0m[33minput[0m: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[32m[    1.384247] [0m[33mACPI[0m: Sleep Button [SLPF]
+[32m[    1.385995] [0m[33mSerial[0m: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[32m[    1.386578] [0m[33mbattery[0m: ACPI: Battery Slot [BAT0] (battery present)
+[32m[    1.393293] [0mLinux agpgart interface v0.103
+[32m[    1.405670] [0m[33mloop[0m: module loaded
+[32m[    1.405774] [0m[33mata_piix 0000:00:01.1[0m: version 2.13
+[32m[    1.407506] [0m[33mscsi host0[0m: ata_piix
+[32m[    1.408106] [0m[33mscsi host1[0m: ata_piix
+[32m[    1.408138] [0m[33mata1[0m: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[32m[    1.408139] [0m[33mata2[0m: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[32m[    1.408258] [0m[33mlibphy[0m: Fixed MDIO Bus: probed
+[32m[    1.408259] [0m[33mtun[0m: Universal TUN/TAP device driver, 1.6
+[32m[    1.408617] [0mPPP generic driver version 2.4.2
+[32m[    1.408693] [0m[33mehci_hcd[0m: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[32m[    1.408695] [0m[33mehci-pci[0m: EHCI PCI platform driver
+[32m[    1.409383] [0m[33mehci-pci 0000:00:0b.0[0m: EHCI Host Controller
+[32m[    1.409387] [0m[33mehci-pci 0000:00:0b.0[0m: new USB bus registered, assigned bus number 1
+[32m[    1.409953] [0m[33mehci-pci 0000:00:0b.0[0m: irq 19, io mem 0xf0805000
+[32m[    1.425483] [0m[33mehci-pci 0000:00:0b.0[0m: USB 2.0 started, EHCI 1.00
+[32m[    1.425596] [0m[33musb usb1[0m: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.20
+[32m[    1.425597] [0m[33musb usb1[0m: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[32m[    1.425598] [0m[33musb usb1[0m: Product: EHCI Host Controller
+[32m[    1.425599] [0m[33musb usb1[0m: Manufacturer: Linux 4.20.11.sslab ehci_hcd
+[32m[    1.425599] [0m[33musb usb1[0m: SerialNumber: 0000:00:0b.0
+[32m[    1.425686] [0m[33mhub 1-0:1.0[0m: USB hub found
+[32m[    1.425688] [0m[33mhub 1-0:1.0[0m: 12 ports detected
+[32m[    1.426018] [0m[33mehci-platform[0m: EHCI generic platform driver
+[32m[    1.426023] [0m[33mohci_hcd[0m: USB 1.1 'Open' Host Controller (OHCI) Driver
+[32m[    1.426025] [0m[33mohci-pci[0m: OHCI PCI platform driver
+[32m[    1.426553] [0m[33mohci-pci 0000:00:06.0[0m: OHCI PCI host controller
+[32m[    1.426556] [0m[33mohci-pci 0000:00:06.0[0m: new USB bus registered, assigned bus number 2
+[32m[    1.426790] [0m[33mohci-pci 0000:00:06.0[0m: irq 22, io mem 0xf0804000
+[32m[    1.486398] [0m[33musb usb2[0m: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 4.20
+[32m[    1.486400] [0m[33musb usb2[0m: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[32m[    1.486402] [0m[33musb usb2[0m: Product: OHCI PCI host controller
+[32m[    1.486403] [0m[33musb usb2[0m: Manufacturer: Linux 4.20.11.sslab ohci_hcd
+[32m[    1.486404] [0m[33musb usb2[0m: SerialNumber: 0000:00:06.0
+[32m[    1.486616] [0m[33mhub 2-0:1.0[0m: USB hub found
+[32m[    1.486686] [0m[33mhub 2-0:1.0[0m: 12 ports detected
+[32m[    1.487721] [0m[33mohci-platform[0m: OHCI generic platform driver
+[32m[    1.487741] [0m[33muhci_hcd[0m: USB Universal Host Controller Interface driver
+[32m[    1.487827] [0m[33mi8042[0m: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[32m[    1.489813] [0m[33mserio[0m: i8042 KBD port at 0x60,0x64 irq 1
+[32m[    1.489871] [0m[33mserio[0m: i8042 AUX port at 0x60,0x64 irq 12
+[32m[    1.490020] [0m[33mmousedev[0m: PS/2 mouse device common for all mice
+[32m[    1.493926] [0m[33mrtc_cmos rtc_cmos[0m: registered as rtc0
+[32m[    1.493934] [0m[33mrtc_cmos rtc_cmos[0m: alarms up to one day, 114 bytes nvram
+[32m[    1.493941] [0mi2c /dev entries driver
+[32m[    1.494083] [0m[33mdevice-mapper[0m: uevent: version 1.0.3
+[32m[    1.494148] [0m[33mdevice-mapper[0m: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[32m[    1.495348] [0m[33minput[0m: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[32m[    1.496809] [0m[33mledtrig-cpu[0m: registered to indicate activity on CPUs
+[32m[    1.497327] [0m[33mNET[0m: Registered protocol family 10
+[32m[    1.507326] [0mSegment Routing with IPv6
+[32m[    1.507341] [0m[33mNET[0m: Registered protocol family 17
+[32m[    1.507645] [0mKey type dns_resolver registered
+[32m[    1.510224] [0m[33mRAS[0m: Correctable Errors collector initialized.
+[32m[    1.510235] [0m[33msched_clock[0m: Marking stable (1476328403, 33832692)->(1873090102, -362929007)
+[32m[    1.523289] [0mregistered taskstats version 1
+[32m[    1.523300] [0mLoading compiled-in X.509 certificates
+[32m[    1.525466] [0m[33mLoaded X.509 cert 'Build time autogenerated kernel key[0m: 9b5ee84166b1ab75a4aafeb8402a405f7f2b43b9'
+[32m[    1.525577] [0m[33mzswap[0m: loaded using pool lzo/zbud
+[32m[    1.542589] [0mKey type big_key registered
+[32m[    1.542591] [0mKey type trusted registered
+[32m[    1.546403] [0mKey type encrypted registered
+[32m[    1.546406] [0m[33mAppArmor[0m: AppArmor sha1 policy hashing enabled
+[32m[    1.546411] [0m[33mima[0m: No TPM chip found, activating TPM-bypass!
+[32m[    1.546414] [0m[33mima[0m: Allocated hash algorithm: sha1
+[32m[    1.546468] [0m[33mevm[0m: Initialising EVM extended attributes:
+[32m[    1.546469] [0m[33mevm[0m: security.selinux
+[32m[    1.546469] [0m[33mevm[0m: security.SMACK64
+[32m[    1.546470] [0m[33mevm[0m: security.SMACK64EXEC
+[32m[    1.546470] [0m[33mevm[0m: security.SMACK64TRANSMUTE
+[32m[    1.546470] [0m[33mevm[0m: security.SMACK64MMAP
+[32m[    1.546471] [0m[33mevm[0m: security.apparmor
+[32m[    1.546471] [0m[33mevm[0m: security.ima
+[32m[    1.546471] [0m[33mevm[0m: security.capability
+[32m[    1.546472] [0m[33mevm[0m: HMAC attrs: 0x1
+[32m[    1.546790] [0m[33m  Magic number[0m: 8:99:716
+[32m[    1.547988] [0m[33mrtc_cmos rtc_cmos[0m: setting system clock to 2024-05-28 03:42:26 UTC (1716867746)
+[32m[    1.585817] [0m[33mata2.00[0m: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+[32m[    1.587870] [0m[33mscsi 1:0:0:0[0m: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+[32m[    1.589452] [0m[33msr 1:0:0:0[0m: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+[32m[    1.589454] [0m[33mcdrom[0m: Uniform CD-ROM driver Revision: 3.20
+[32m[    1.589702] [0m[33msr 1:0:0:0[0m: Attached scsi CD-ROM sr0
+[32m[    1.590023] [0m[33msr 1:0:0:0[0m: Attached scsi generic sg0 type 5
+[32m[    1.593219] [0m[33mFreeing unused decrypted memory[0m: 2040K
+[32m[    1.594525] [0m[33mFreeing unused kernel image memory[0m: 2460K
+[32m[    1.628268] [0m[33mWrite protecting the kernel read-only data[0m: 22528k
+[32m[    1.631626] [0m[33mFreeing unused kernel image memory[0m: 2012K
+[32m[    1.633085] [0m[33mFreeing unused kernel image memory[0m: 1992K
+[32m[    1.637210] [0m[33mx86/mm[0m: Checked W+X mappings: passed, no W+X pages found.
+[32m[    1.637234] [0mRun /init as init process
+[32m[    1.746288] [0m[33mACPI[0m: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[32m[    1.746329] [0m[33minput[0m: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input4
+[32m[    1.865927] [0m[33mpiix4_smbus 0000:00:07.0[0m: SMBus Host Controller at 0x4100, revision 0
+[32m[    1.877308] [0m[33me1000[0m: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[32m[    1.877309] [0m[33me1000[0m: Copyright (c) 1999-2006 Intel Corporation.
+[32m[    1.991676] [0m[33musb 2-1[0m: new full-speed USB device number 2 using ohci-pci
+[32m[    2.010755] [0m[33mahci 0000:00:0d.0[0m: version 3.0
+[32m[    2.011779] [0m[33mahci 0000:00:0d.0[0m: SSS flag set, parallel bus scan disabled
+[32m[    2.013967] [0m[33mahci 0000:00:0d.0[0m: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+[32m[    2.013968] [0m[33mahci 0000:00:0d.0[0m: flags: 64bit ncq stag only ccc 
+[32m[    2.065319] [0m[33mhrtimer[0m[1m: interrupt took 11502167 ns[0m
+[32m[    2.066775] [0m[33mscsi host2[0m: ahci
+[32m[    2.067087] [0m[33mata3[0m: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+[32m[    2.156975] [0m[33m[drm] DMA map mode[0m: Using physical TTM page addresses.
+[32m[    2.157112] [0m[drm] Capabilities:
+[32m[    2.157113] [0m[drm]   Rect copy.
+[32m[    2.157113] [0m[drm]   Cursor.
+[32m[    2.157113] [0m[drm]   Cursor bypass.
+[32m[    2.157114] [0m[drm]   Cursor bypass 2.
+[32m[    2.157114] [0m[drm]   Alpha cursor.
+[32m[    2.157114] [0m[drm]   Extended Fifo.
+[32m[    2.157114] [0m[drm]   Pitchlock.
+[32m[    2.157115] [0m[drm]   Irq mask.
+[32m[    2.157115] [0m[drm]   GMR.
+[32m[    2.157115] [0m[drm]   Traces.
+[32m[    2.157116] [0m[drm]   GMR2.
+[32m[    2.157116] [0m[drm]   Screen Object 2.
+[32m[    2.157116] [0m[drm]   Command Buffers.
+[32m[    2.157117] [0m[drm] Max GMR ids is 8192
+[32m[    2.157117] [0m[drm] Max number of GMR pages is 1048576
+[32m[    2.157118] [0m[drm] Max dedicated hypervisor surface memory is 393216 kiB
+[32m[    2.157118] [0m[drm] Maximum display memory size is 131072 kiB
+[32m[    2.157118] [0m[drm] VRAM at 0xe0000000 size is 131072 kiB
+[32m[    2.157119] [0m[drm] MMIO at 0xf0000000 size is 2048 kiB
+[32m[    2.157119] [0m[drm] global init.
+[32m[    2.157521] [0m[33m[TTM] Zone  kernel[0m: Available graphics memory: 2017680 kiB
+[32m[    2.157521] [0m[TTM] Initializing pool allocator
+[32m[    2.157524] [0m[TTM] Initializing DMA pool allocator
+[32m[    2.158080] [0m[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[32m[    2.158080] [0m[drm] No driver support for vblank timestamp query.
+[32m[    2.158590] [0m[drm] Screen Objects Display Unit initialized
+[32m[    2.158624] [0m[drm] width 720
+[32m[    2.159435] [0m[drm] height 400
+[32m[    2.159470] [0m[drm] bpp 32
+[32m[    2.159735] [0m[drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[32m[    2.161574] [0m[drm] Using command buffers with DMA pool.
+[32m[    2.161586] [0m[33m[drm] DX[0m: no.
+[32m[    2.161586] [0m[33m[drm] Atomic[0m: yes.
+[32m[    2.161587] [0m[33m[drm] SM4_1[0m: no.
+[32m[    2.161604] [0m[31m[drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.[0m
+[32m[    2.164360] [0m[31m[drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.[0m
+[32m[    2.199096] [0m[33mfbcon[0m: svgadrmfb (fb0) is primary device
+[32m[    2.294912] [0m[33minput[0m: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+[32m[    2.306430] [0m[33mConsole[0m: switching to colour frame buffer device 100x37
+[32m[    2.306952] [0m[drm] Initialized vmwgfx 2.15.0 20180704 for 0000:00:02.0 on minor 0
+[32m[    2.346295] [0m[33musb 2-1[0m: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+[32m[    2.346297] [0m[33musb 2-1[0m: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+[32m[    2.346298] [0m[33musb 2-1[0m: Product: USB Tablet
+[32m[    2.346299] [0m[33musb 2-1[0m: Manufacturer: VirtualBox
+[32m[    2.359540] [0m[33mhidraw[0m: raw HID events driver (C) Jiri Kosina
+[32m[    2.378186] [0m[33musbcore[0m: registered new interface driver usbhid
+[32m[    2.378187] [0m[33musbhid[0m: USB HID core driver
+[32m[    2.389431] [0m[33minput[0m: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:80EE:0021.0001/input/input6
+[32m[    2.389997] [0m[33mhid-generic 0003:80EE:0021.0001[0m: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+[32m[    2.397318] [0m[33mata3[0m: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[32m[    2.397701] [0m[33mata3.00[0m: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[32m[    2.397702] [0m[33mata3.00[0m: 83886080 sectors, multi 128: LBA48 NCQ (depth 32)
+[32m[    2.398116] [0m[33mata3.00[0m: configured for UDMA/133
+[32m[    2.398422] [0m[33mscsi 2:0:0:0[0m: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[32m[    2.400260] [0m[33msd 2:0:0:0[0m: [sda] 83886080 512-byte logical blocks: (42.9 GB/40.0 GiB)
+[32m[    2.400264] [0m[33msd 2:0:0:0[0m: [sda] Write Protect is off
+[32m[    2.400265] [0m[33msd 2:0:0:0[0m: [sda] Mode Sense: 00 3a 00 00
+[32m[    2.400269] [0m[33msd 2:0:0:0[0m: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[32m[    2.400253] [0m[33msd 2:0:0:0[0m: Attached scsi generic sg1 type 0
+[32m[    2.410043] [0m[33m sda[0m: sda1
+[32m[    2.410284] [0m[33msd 2:0:0:0[0m: [sda] Attached SCSI disk
+[32m[    2.611301] [0m[33me1000 0000:00:03.0 eth0[0m: (PCI:33MHz:32-bit) 08:00:27:33:1d:ad
+[32m[    2.611306] [0m[33me1000 0000:00:03.0 eth0[0m: Intel(R) PRO/1000 Network Connection
+[32m[    2.621736] [0m[33me1000 0000:00:03.0 enp0s3[0m: renamed from eth0
+[32m[    2.689785] [0m[33mrandom[0m: fast init done
+[32m[    2.796059] [0m[33mEXT4-fs (sda1)[0m: mounted filesystem with ordered data mode. Opts: (null)
+[32m[    2.992244] [0m[33msystemd[1][0m: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[32m[    2.992258] [0m[33msystemd[1][0m: Detected virtualization oracle.
+[32m[    2.992691] [0m[33msystemd[1][0m: Detected architecture x86-64.
+[32m[    3.070002] [0m[33msystemd[1][0m: Set hostname to <osta-VirtualBox>.
+[32m[    3.395922] [0m[33mrandom[0m: systemd: uninitialized urandom read (16 bytes read)
+[32m[    3.396094] [0m[33msystemd[1][0m: Created slice System Slice.
+[32m[    3.396140] [0m[33mrandom[0m: systemd: uninitialized urandom read (16 bytes read)
+[32m[    3.396171] [0m[33msystemd[1][0m: Listening on udev Kernel Socket.
+[32m[    3.396177] [0m[33mrandom[0m: systemd: uninitialized urandom read (16 bytes read)
+[32m[    3.396200] [0m[33msystemd[1][0m: Listening on udev Control Socket.
+[32m[    3.396207] [0m[33msystemd[1][0m: Reached target System Time Synchronized.
+[32m[    3.396210] [0m[33msystemd[1][0m: Reached target User and Group Name Lookups.
+[32m[    3.396231] [0m[33msystemd[1][0m: Listening on Journal Socket (/dev/log).
+[32m[    3.606513] [0m[33mEXT4-fs (sda1)[0m: re-mounted. Opts: errors=remount-ro
+[32m[    3.634839] [0m[33mlp[0m: driver loaded but no devices found
+[32m[    3.661071] [0mAdding 1942896k swap on /swapfile.  Priority:-2 extents:6 across:2106736k FS
+[32m[    3.745897] [0m[33mppdev[0m: user-space parallel port driver
+[32m[    3.802271] [0m[33msystemd-journald[440][0m: Received request to flush runtime journal from PID 1
+[32m[    3.819881] [0m[33msystemd-journald[440][0m[1m: File /var/log/journal/55520dd953f649158183b09e0a9ca2a5/system.journal corrupted or uncleanly shut down, renaming and replacing.[0m
+[32m[    4.915851] [0m[33mcryptd[0m: max_cpu_qlen set to 1000
+[32m[    5.204531] [0m[33mrandom[0m: crng init done
+[32m[    5.204532] [0m[33mrandom[0m: 7 urandom warning(s) missed due to ratelimiting
+[32m[    5.222511] [0m[33mvboxguest[0m[1m: loading out-of-tree module taints kernel.[0m
+[32m[    5.239473] [0m[33mvboxguest[0m: module verification failed: signature and/or required key missing - tainting kernel
+[32m[    5.247644] [0m[33mvgdrvHeartbeatInit[0m[1m: Setting up heartbeat to trigger every 2000 milliseconds[0m
+[32m[    5.247876] [0m[1mHost supports full mouse state reporting, switching to extended mouse integration protocol[0m
+[32m[    5.247900] [0m[33minput[0m: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input7
+[32m[    5.305248] [0m[33mvboxguest[0m[1m: Successfully loaded version 7.0.18 r162988[0m
+[32m[    5.305709] [0m[33mvboxguest[0m[1m: misc device minor 55, IRQ 20, I/O port d040, MMIO at 00000000f0400000 (size 0x400000)[0m
+[32m[    5.308028] [0m[33mvboxguest[0m: Successfully loaded version 7.0.18 r162988 (interface 0x00010004)
+[32m[    7.342281] [0mSSE version of gcm_enc/dec engaged.
+[32m[    8.879855] [0m[33maudit[0m: type=1400 audit(1716867753.828:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-oopslash" pid=760 comm="apparmor_parser"
+[32m[    8.890387] [0m[33maudit[0m: type=1400 audit(1716867753.840:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=756 comm="apparmor_parser"
+[32m[    8.890389] [0m[33maudit[0m: type=1400 audit(1716867753.840:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=756 comm="apparmor_parser"
+[32m[    8.890391] [0m[33maudit[0m: type=1400 audit(1716867753.840:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=756 comm="apparmor_parser"
+[32m[    8.890392] [0m[33maudit[0m: type=1400 audit(1716867753.840:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=756 comm="apparmor_parser"
+[32m[    8.926283] [0m[33maudit[0m: type=1400 audit(1716867753.872:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="libreoffice-senddoc" pid=761 comm="apparmor_parser"
+[32m[    8.945432] [0m[33maudit[0m: type=1400 audit(1716867753.896:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/ippusbxd" pid=767 comm="apparmor_parser"
+[32m[    8.953425] [0m[33maudit[0m: type=1400 audit(1716867753.896:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/cups-browsed" pid=765 comm="apparmor_parser"
+[32m[    8.969869] [0m[33maudit[0m: type=1400 audit(1716867753.908:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/cups/backend/cups-pdf" pid=766 comm="apparmor_parser"
+[32m[    8.973811] [0m[33maudit[0m: type=1400 audit(1716867753.908:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/cupsd" pid=766 comm="apparmor_parser"
+[32m[    9.329974] [0m[33msnd_intel8x0 0000:00:05.0[0m: white list rate for 1028:0177 is 48000
+[32m[   14.863839] [0m[33mIPv6[0m: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+[32m[   14.905311] [0m[33me1000[0m: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[32m[   14.906307] [0m[33mIPv6[0m: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+[32m[   14.907699] [0m[33mIPv6[0m: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[32m[   15.088419] [0m[33m03:42:40.041283 main     VBoxService 7.0.18 r162988 (verbosity[0m[1m: 0) linux.amd64 (May  2 2024 10:34:13) release log
+               03:42:40.041285 main     Log opened 2024-05-28T03:42:40.041280000Z[0m
+[32m[   15.088451] [0m[33m03:42:40.041347 main     OS Product[0m[1m: Linux[0m
+[32m[   15.088473] [0m[33m03:42:40.041371 main     OS Release[0m[1m: 4.20.11.sslab[0m
+[32m[   15.088495] [0m[33m03:42:40.041394 main     OS Version[0m[1m: #12 SMP Tue May 28 12:28:21 KST 2024[0m
+[32m[   15.088522] [0m[33m03:42:40.041415 main     Executable[0m[1m: /opt/VBoxGuestAdditions-7.0.18/sbin/VBoxService
+               03:42:40.041416 main     Process ID: 1174
+               03:42:40.041416 main     Package type: LINUX_64BITS_GENERIC[0m
+[32m[   15.091075] [0m[1m03:42:40.043958 main     7.0.18 r162988 started. Verbose level = 0[0m
+[32m[   15.105286] [0m[33m03:42:40.058165 main     vbglR3GuestCtrlDetectPeekGetCancelSupport[0m[1m: Supported (#1)[0m
+[32m[   16.436053] [0m[33msystemd-journald[440][0m[1m: File /var/log/journal/55520dd953f649158183b09e0a9ca2a5/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.[0m
+[32m[   23.073765] [0m[33mrfkill[0m: input handler disabled
+[32m[   28.158583] [0m[33mISO 9660 Extensions[0m: Microsoft Joliet Level 3
+[32m[   28.471703] [0m[33mISO 9660 Extensions[0m: RRIP_1991A
+[32m[   75.399018] [0m[1minserted because of priorityA[0m
+[32m[   75.501264] [0m[1minserted because of priorityA[0m
+[32m[   75.608337] [0m[1minserted because of priorityA[0m
+[32m[   75.709730] [0m[1minserted because of priorityA[0m
+[32m[   75.810508] [0m[1minserted because of priorityA[0m
+[32m[   75.911977] [0m[1minserted because of priorityA[0m
+[32m[   76.023100] [0m[1minserted because of priorityA[0m
+[32m[   76.126423] [0m[1minserted because of priorityA[0m
+[32m[   76.230404] [0m[1minserted because of priorityA[0m
+[32m[   76.300993] [0m[1minserted because of new jobB[0m
+[32m[   76.300995] [0m[33mWorking Denied[0m[1m: B[0m
+[32m[   76.332477] [0m[1minserted because of priorityA[0m
+[32m[   76.404004] [0m[33mWorking[0m[1m: B[0m
+[32m[   76.442822] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   76.507828] [0m[33mWorking[0m[1m: B[0m
+[32m[   76.545304] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   76.610096] [0m[33mWorking[0m[1m: B[0m
+[32m[   76.648745] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   76.713394] [0m[33mWorking[0m[1m: B[0m
+[32m[   76.749158] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   76.821952] [0m[33mWorking[0m[1m: B[0m
+[32m[   76.860231] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   76.923198] [0m[33mWorking[0m[1m: B[0m
+[32m[   76.961929] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.023859] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.071116] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.127365] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.192102] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.229503] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.298370] [0m[1minserted because of new jobC[0m
+[32m[   77.298371] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   77.298382] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.332212] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.400246] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   77.400265] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.434726] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.502862] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   77.502874] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.534961] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.603288] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   77.603300] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.638299] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.707157] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   77.707167] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.740415] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.815889] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   77.815911] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.842262] [0m[33mWorking[0m[1m: B[0m
+[32m[   77.916462] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   77.916475] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   77.945229] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.022888] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.022908] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.064137] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.124463] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.124482] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.164821] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.227295] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.227308] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.266226] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.328514] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.328526] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.371162] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.430781] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.430792] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.473275] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.531217] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.531230] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.576347] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.634061] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.634072] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.677553] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.734207] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.734217] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.779381] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.843964] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.843978] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.881652] [0m[33mWorking[0m[1m: B[0m
+[32m[   78.945240] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   78.945251] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   78.994369] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.045397] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.045408] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.095262] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.145688] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.145697] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.201192] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.253661] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.253672] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.307888] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.360457] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.360466] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.412978] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.476315] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.476329] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.514189] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.578771] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.578784] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.615972] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.679459] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.679470] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.717293] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.782895] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.782908] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.819311] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.885167] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.885186] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   79.920846] [0m[33mWorking[0m[1m: B[0m
+[32m[   79.989681] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   79.989701] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.023598] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.092684] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.092695] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.127305] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.199799] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.199815] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.228117] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.304637] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.304647] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.330284] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.405399] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.405409] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.431309] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.515198] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.515207] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.533335] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.616607] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.616621] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.636922] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.721656] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.721667] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.740560] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.821921] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.821935] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.844270] [0m[33mWorking[0m[1m: B[0m
+[32m[   80.924267] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   80.924279] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   80.949427] [0m[33mWorking[0m[1m: B[0m
+[32m[   81.026915] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.026928] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   81.051004] [0m[33mWorking[0m[1m: B[0m
+[32m[   81.129751] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.129762] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   81.170155] [0m[33mWorking[0m[1m: B[0m
+[32m[   81.232787] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.232799] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   81.273633] [0m[33mWorking[0m[1m: B[0m
+[32m[   81.334128] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.334140] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   81.375162] [0m[33mWorking[0m[1m: B[0m
+[32m[   81.437628] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.437640] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   81.475815] [0m[33mWorking[0m[1m: B[0m
+[32m[   81.539038] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.539051] [0m[33mWorking Denied[0m[1m: A[0m
+[32m[   81.577953] [0m[33mProcess Finish[0m[1m: B[0m
+[32m[   81.577955] [0m[1mpoped
+                B[0m
+[32m[   81.645012] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.645028] [0m[33mWorking[0m[1m: A[0m
+[32m[   81.745468] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.745483] [0m[33mWorking[0m[1m: A[0m
+[32m[   81.849801] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.849825] [0m[33mWorking[0m[1m: A[0m
+[32m[   81.950910] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   81.950922] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.057757] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.057772] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.160946] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.160954] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.263691] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.263700] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.370373] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.370383] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.470776] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.470786] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.572744] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.572757] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.673755] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.673768] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.790519] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.790533] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.891523] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.891535] [0m[33mWorking[0m[1m: A[0m
+[32m[   82.993081] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   82.993095] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.096633] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.096643] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.199733] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.199742] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.300002] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.300010] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.406861] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.406871] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.510337] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.510346] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.613912] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.613922] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.716744] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.716752] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.818485] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.818499] [0m[33mWorking[0m[1m: A[0m
+[32m[   83.927301] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   83.927314] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.028019] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.028033] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.128519] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.128532] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.230138] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.230149] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.335482] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.335491] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.435992] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.436005] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.538871] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.538882] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.640128] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.640142] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.742704] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.742715] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.843650] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.843664] [0m[33mWorking[0m[1m: A[0m
+[32m[   84.945063] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   84.945073] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.047817] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.047830] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.151172] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.151181] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.251950] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.251957] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.352868] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.352876] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.453922] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.453936] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.560168] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.560180] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.667202] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.667214] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.771295] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.771307] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.873259] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.873272] [0m[33mWorking[0m[1m: A[0m
+[32m[   85.973771] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   85.973780] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.075223] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.075235] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.175400] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.175413] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.278540] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.278560] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.379518] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.379532] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.480619] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.480632] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.584760] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.584769] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.686769] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.686779] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.789784] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.789800] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.892821] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.892834] [0m[33mWorking[0m[1m: A[0m
+[32m[   86.992908] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   86.992916] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.097353] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.097362] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.198301] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.198311] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.302238] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.302249] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.402667] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.402683] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.503538] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.503549] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.613292] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.613304] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.714582] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.714591] [0m[33mWorking[0m[1m: A[0m
+[32m[   87.821344] [0m[33mWorking Denied[0m[1m: C[0m
+[32m[   87.821355] [0m[33mProcess Finish[0m[1m: A[0m
+[32m[   87.821355] [0m[1mpoped
+                A[0m
+[32m[   87.932788] [0m[1minserted because of priorityC[0m
+[32m[   88.034052] [0m[1minserted because of priorityC[0m
+[32m[   88.138802] [0m[1minserted because of priorityC[0m
+[32m[   88.238966] [0m[1minserted because of priorityC[0m
+[32m[   88.343150] [0m[1minserted because of priorityC[0m
+[32m[   88.443297] [0m[1minserted because of priorityC[0m
+[32m[   88.546568] [0m[1minserted because of priorityC[0m
+[32m[   88.648154] [0m[1minserted because of priorityC[0m
+[32m[   88.751727] [0m[1minserted because of priorityC[0m
+[32m[   88.857275] [0m[1minserted because of priorityC[0m
+[32m[   88.957682] [0m[1minserted because of priorityC[0m
+[32m[   89.058684] [0m[1minserted because of priorityC[0m
+[32m[   89.159343] [0m[1minserted because of priorityC[0m
+[32m[   89.279097] [0m[1minserted because of priorityC[0m
+[32m[   89.385806] [0m[1minserted because of priorityC[0m
+[32m[   89.489239] [0m[1minserted because of priorityC[0m
+[32m[   89.603502] [0m[1minserted because of priorityC[0m
+[32m[   89.703582] [0m[1minserted because of priorityC[0m
+[32m[   89.804418] [0m[1minserted because of priorityC[0m
+[32m[   89.907998] [0m[1minserted because of priorityC[0m
+[32m[   90.008164] [0m[1minserted because of priorityC[0m
+[32m[   90.110277] [0m[1minserted because of priorityC[0m
+[32m[   90.211436] [0m[1minserted because of priorityC[0m
+[32m[   90.315929] [0m[1minserted because of priorityC[0m
+[32m[   90.419357] [0m[1minserted because of priorityC[0m
+[32m[   90.533390] [0m[1minserted because of priorityC[0m
+[32m[   90.634176] [0m[1minserted because of priorityC[0m
+[32m[   90.734902] [0m[1minserted because of priorityC[0m
+[32m[   90.836685] [0m[1minserted because of priorityC[0m
+[32m[   90.938204] [0m[1minserted because of priorityC[0m
+[32m[   91.038320] [0m[1minserted because of priorityC[0m
+]0;root@osta-VirtualBox: /usr/src/linux-4.20.11[01;32mroot@osta-VirtualBox[00m:[01;34m/usr/src/linux-4.20.11[00m# exit
+
+Script done on 2024-05-28 12:44:16+0900

@@ -1,0 +1,18 @@
+Script started on 2024-05-27 22:47:06+0900
+]0;root@osta-VirtualBox: /usr/src/linux-4.20.11[01;32mroot@osta-VirtualBox[00m:[01;34m/usr/src/linux-4.20.11[00m# ./run
+]0;root@osta-VirtualBox: /usr/src/linux-4.20.11[01;32mroot@osta-VirtualBox[00m:[01;34m/usr/src/linux-4.20.11[00m# 
+Process A : I will use CPU by 7s.
+
+Process B : I will use CPU by 5s.
+
+Process C : I will use CPU by 3s.
+
+Process C : Finish! My response time is 1s and My total wait time is 6s.
+
+Process B : Finish! My response time is 0s and My total wait time is 8s.
+
+Process A : Finish! My response time is 0s and My total wait time is 9s.
+^C
+]0;root@osta-VirtualBox: /usr/src/linux-4.20.11[01;32mroot@osta-VirtualBox[00m:[01;34m/usr/src/linux-4.20.11[00m# exit
+
+Script done on 2024-05-27 22:47:27+0900
